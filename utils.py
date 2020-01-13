@@ -44,7 +44,7 @@ def train_and_save(learner, lr, epochs, fname, metrics=None):
 
 
 def load_pretrained_model(model_to_load, PATHS, training, bs):
-    utils.main()
+#     utils.main()
     params=pickle.load(open(f'{PATHS["generator"]}/{model_to_load}_params.pkl','rb'))
     TEXT=pickle.load(open(f'{PATHS["generator"]}/{model_to_load}_text.pkl','rb'))
     lm = LanguageModel(to_gpu(get_language_model(params["n_tok"], params["em_sz"], params["nh"], 
